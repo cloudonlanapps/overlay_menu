@@ -15,11 +15,13 @@ class MenuVisibiltiyNotifier extends StateNotifier<bool> {
   showWithTimeOut() {
     timer?.cancel();
     state = true;
-    timer = Timer(duration, () {
-      if (mounted) {
-        state = false;
-      }
-    });
+    if (duration != Duration.zero) {
+      timer = Timer(duration, () {
+        if (mounted) {
+          state = false;
+        }
+      });
+    }
   }
 
   hide() {

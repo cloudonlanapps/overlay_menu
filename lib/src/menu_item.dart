@@ -1,4 +1,4 @@
-class CLMenuItem {
+class MenuItem {
   /// label to the main item
   final String label;
 
@@ -13,5 +13,5 @@ class CLMenuItem {
   /// but disabled.
   final void Function()? onTap;
 
-  CLMenuItem(this.label, this.iconData, {this.onTap, this.showLabel = true});
+  MenuItem(this.label, this.iconData, {this.onTap, this.showLabel = true});
 }

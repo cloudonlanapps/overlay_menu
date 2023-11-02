@@ -35,15 +35,15 @@ class ContentWithOverlayMenu extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         child: OverlayMenu(
           topMenuItems: [
-            CLMenuItem("Begin", Icons.arrow_upward, onTap: () {}),
-            CLMenuItem("End", Icons.arrow_downward, onTap: () {}),
+            MenuItem("Begin", Icons.arrow_upward, onTap: () {}),
+            MenuItem("End", Icons.arrow_downward, onTap: () {}),
           ],
-          topMenuItemSpecialLeft: CLMenuItem("Back", Icons.arrow_upward,
+          topMenuItemSpecialLeft: MenuItem("Back", Icons.arrow_upward,
               onTap: () {}, showLabel: false),
           bottomMenuItems: [
-            CLMenuItem("Home", Icons.home, onTap: () {}),
-            CLMenuItem("Settings", Icons.settings, onTap: () {}),
-            CLMenuItem("Style", Icons.style, onTap: () {})
+            MenuItem("Home", Icons.home, onTap: () {}),
+            MenuItem("Settings", Icons.settings, onTap: () {}),
+            MenuItem("Style", Icons.style, onTap: () {})
           ],
           timeout: const Duration(seconds: 3),
           child: ListView.builder(

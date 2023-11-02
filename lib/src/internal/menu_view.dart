@@ -14,10 +14,10 @@ class MenuView extends ConsumerWidget {
     this.hideMenuItem,
   });
 
-  final List<CLMenuItem>? menuItems;
-  final CLMenuItem? menuItemSpecialLeft;
+  final List<MenuItem>? menuItems;
+  final MenuItem? menuItemSpecialLeft;
   final MainAxisAlignment? mainAxisAlignment;
-  final CLMenuItem? hideMenuItem;
+  final MenuItem? hideMenuItem;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -38,7 +38,7 @@ class MenuView extends ConsumerWidget {
             Expanded(
               child: Align(
                   alignment: Alignment.centerLeft,
-                  child: CLMenuButton(menuItemSpecialLeft?.insertHook(
+                  child: MenuButton(menuItemSpecialLeft?.insertHook(
                       pre: ref.read(menuVisibilityProvider.notifier).hide))),
             ),
             const VerticalDivider(),
@@ -54,14 +54,14 @@ class MenuView extends ConsumerWidget {
                 children: [
                   if (menuItems != null)
                     ...menuItems!
-                        .map((e) => CLMenuButton(e.insertHook(pre: () {
+                        .map((e) => MenuButton(e.insertHook(pre: () {
                               ref
                                   .read(menuVisibilityProvider.notifier)
                                   .holdMore();
                             })))
                         .toList(),
                   if (hideMenuItem != null)
-                    CLMenuButton(hideMenuItem!.copyWith(onTap: () {
+                    MenuButton(hideMenuItem!.copyWith(onTap: () {
                       ref.read(menuVisibilityProvider.notifier).hide();
                     }))
                 ],

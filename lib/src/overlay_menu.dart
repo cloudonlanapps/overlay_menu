@@ -36,11 +36,11 @@ class OverlayMenu extends ConsumerWidget {
     this.timeout = const Duration(seconds: 3),
   });
   final Widget child;
-  final List<CLMenuItem>? topMenuItems;
-  final CLMenuItem? topMenuItemSpecialLeft;
-  final List<CLMenuItem>? bottomMenuItems;
-  final CLMenuItem? bottomMenuItemSpecialLeft;
-  final CLMenuItem? hideMenuItem;
+  final List<MenuItem>? topMenuItems;
+  final MenuItem? topMenuItemSpecialLeft;
+  final List<MenuItem>? bottomMenuItems;
+  final MenuItem? bottomMenuItemSpecialLeft;
+  final MenuItem? hideMenuItem;
   final bool hideMenuOnTop;
   final Duration timeout;
 

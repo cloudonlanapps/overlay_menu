@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'custom_icon.dart';
 import '../menu_item.dart';
 
-extension CLMenuItemExtension on CLMenuItem {
-  CLMenuItem copyWith({
+extension MenuItemExtension on MenuItem {
+  MenuItem copyWith({
     bool? showTitle,
     void Function()? onTap,
   }) {
-    return CLMenuItem(
+    return MenuItem(
       label,
       iconData,
       showLabel: showTitle ?? showLabel,
@@ -31,9 +31,9 @@ extension CLMenuItemExtension on CLMenuItem {
   }
 }
 
-class CLMenuButton extends StatelessWidget {
-  final CLMenuItem menuItem;
-  const CLMenuButton(
+class MenuButton extends StatelessWidget {
+  final MenuItem menuItem;
+  const MenuButton(
     this.menuItem, {
     super.key,
   });

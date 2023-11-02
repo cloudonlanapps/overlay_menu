@@ -1,0 +1,22 @@
+name: overlay_menu
+description: A simple utility, that adds a layer of top and bottom menu, navigation style but with different features.
+version: 0.1.0
+
+homepage: https://www.cloudonlanapps.com
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+

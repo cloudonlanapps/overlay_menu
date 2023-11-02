@@ -45,6 +45,7 @@ class ContentWithOverlayMenu extends StatelessWidget {
             MenuItem("Settings", Icons.settings, onTap: () {}),
             MenuItem("Style", Icons.style, onTap: () {})
           ],
+          hideMenuItem: MenuItem("", Icons.close, showLabel: false),
           timeout: const Duration(seconds: 3),
           child: ListView.builder(
             itemCount: 1,
